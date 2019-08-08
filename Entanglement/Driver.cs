@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.Quantum.Simulation.Simulators;
 using Quantum.Entanglement;
 
@@ -10,8 +11,11 @@ namespace Entanglement
         {
             using (var simulator = new QuantumSimulator())
             {
-                var results = Measurement.Run(simulator).Result;
-                Console.WriteLine($"Measured result states: {results}.");
+                foreach (var iteration in Enumerable.Range(0, 10))
+                {
+                    var results = EntangleAndMeasure.Run(simulator).Result;
+                    Console.WriteLine($"Measured result states: {results}.");
+                }
             }
 
             Console.ReadKey();
