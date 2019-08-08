@@ -1,0 +1,17 @@
+bin/
+obj/
+Documentation/Help/
+packages/
+src/simulation/Runtime/x64/
+*.obj
+*.dll
+*.pdb
+*.exe
+*.chm
+*.html
+*.suo
+*.vssscc
+*.vspscc
+UpgradeLog.htm
+.vs
+*.user
